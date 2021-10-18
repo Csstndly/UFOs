@@ -7,69 +7,7 @@ const tableData = data;
 //d3.select so JS will for <tbody>
 var tbody = d3.select("tbody");
 
-//for the project the code will function will be used to fill the table with data only.
-
-// Create the function and pass in "data" above
-
-function buildTable(data) {
-
-}
-
-// Adding to function so that the code will clear existing data, so users won't end up with pre-filtered data.
-
-//Clearing the existing data creates a fresh table in which we can insert data. If we didn't clear existing data first,
-//then we would find ourselves reinserting data that already exists, thus creating duplicates and making a bit of a mess
-//It's good practice to clear the existing data first to give ourselves a clean slate to work with.
-
-function buildTable(data) {
-  tbody.html(""); //tells js to use an empty string when creating table/ create a blank canvas. References html
-}
-
-
-//This function builds the table/adding data to the table.
-
-//forEach loop works only with arrays and usable with arrow function
-// syntax: varname.forEach(callback function)
-//callback function can be a anonymous funct, named funct, or arrow funct
-
-
-  data.forEach((dataRow) => {
-//data = object referencing data being imported
-//forEach = keyword creating a loop
-//dataRow = parameter that will be used as a value when the function is called
-    });
-
-
-//Tells js to find tbody tag in HTML and add a table row/tr
-  data.forEach((dataRow) => {
-    let row = tbody.append("tr");
-
-    });
-
-
-//Object.values = to reference 1 object from the array
-//dataRow = argument stating to put the values in dataRow
-//val = argument representing each item in the object, i.e location, shape, duration
-data.forEach((dataRow) => {
-   let row = tbody.append("tr");
-   Object.values(dataRow).forEach((val) => {
-});
-
-    });
-
-// Append each value of the object to a cell in the table.
-// let cell = created variable to appending data  into a table data tag "td"
-// cell.text(val) = variable that holds only each value from the object.
-  data.forEach((dataRow) => {
-    let row = tbody.append("tr");
-    Object.values(dataRow).forEach((val) => {
-      let cell = row.append("td");
-      cell.text(val);
-      }
-    );
-  });
-
-//NEATER VERSION
+// Build table
 function buildTable(data) {
   // First, clear out any existing data
   tbody.html("");
@@ -89,5 +27,34 @@ function buildTable(data) {
     );
   });
 }
+
+// ADDING FILTERS and EVENTS
+
+function handleClick() {
+  // Grab the datetime value from the filter
+  let date = d3.select("#datetime").property("value");
+  let filteredData = tableData;
+
+   // Check to see if a date was entered and filter the
+  // data using that date.
+  if (date) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `datetime` value matches the filter value
+    filteredData = filteredData.filter(row => row.datetime === date);
+  }
+
+   // Rebuild the table using the filtered data
+  // @NOTE: If no date was entered, then filteredData will
+  // just be the original tableData.
+  buildTable(filteredData);
+}
+
+// Attach an event to listen for the form button
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+// Build the table when the page loads
+buildTable(tableData);
+
+
 
 
