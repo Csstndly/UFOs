@@ -9,7 +9,7 @@ var tbody = d3.select("tbody");
 
 // Build table
 function buildTable(data) {
-  // First, clear out any existing data
+  // First, clear out any existing data by referencing the table in html and qouting empty strings aka create a blank canvas
   tbody.html("");
 
   // Next, loop through each object in the data
