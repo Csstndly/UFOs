@@ -18,21 +18,22 @@ will use Bootstrap built in functions, classes, etc-->
     <!-- added link to stylesheet (one created) -->
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body  class="bg-dark">
     <!-- adds functionality, groups the elements,specifies styling -->
     <div class="wrapper">
-                        <!-- n-e-l allows navbar to resize smoothly -->
-      <nav class="navbar navbar-expand-lg">
+        <!-- n-e-l allows navbar to resize smoothly and apply dark bg w/ light lettering-->
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
          <!--class = default styling href = link is clicked, page reloads and the default unfiltered table will appear-->
         <a class="navbar-brand" href="index.html">UFO Sightings</a>
-
-
       </nav>
     </div>
+
     <!--adds a grey container and enlarges + boldens header tag -->
     <div class="jumbotron">
-        <h1>The Truth Is Out There</h1>
+        <!--class chagnes font size and style -->
+        <h1 class="display-4">The Truth Is Out There</h1>
     </div>
+
         <!--ensure that both elements we're adding will span the width of the viewport-->
       <div class="container-fluid">
           <!--ensure that both elements we're adding will span the width of the viewport-->
@@ -49,23 +50,26 @@ will use Bootstrap built in functions, classes, etc-->
         </div>
 
       </div>
+
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
             <!--creating a form for the filter-->
-            <form>
+            <form class="bg-dark">
               <p>Filter Search</p>
+              <ul class="list-group bg-dark">
+                <li class="list-group-item bg-dark">
+                    <label for="date">Enter Date</label>
+        <!--code will look for text input. placeholder is example for users. js will look for when button is colicked and thefunction is executed -->
+                    <input type="text" placeholder="1/10/2010" id="datetime" />
+                </li>
+                <li class="list-group-item bg-dark">
+                    <button id="filter-btn" type="button" class="btn btn-dark">
+                        Filter Table
+                    </button>
+                </li>
+              </ul>
             </form>
-<ul class="list-group"></ul>
-<li class="list-group-item">
-    <label for="date">Enter Date</label>
-    <input type="text" placeholder="1/10/2010" id="datetime" />
-</li>
-<li class="list-group-item">
-</li>
-
-
-<button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
           </div>
           <div class="col-md-9">
             <table class="table table-striped">
@@ -86,11 +90,12 @@ will use Bootstrap built in functions, classes, etc-->
           </div>
         </div>
       </div>
+<!--Order of scripts tags matter as executed from top to bottom -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script><!--allows reaction to user input -->
+  <script src="static/js/data.js"></script><!--neeed to load data before accessing it-->
+  <script src="static/js/app.js"></script><!--link to the created responsive table -->
 
 
-
-
-  <!--code will look for text input. placeholder is example for users. js will look for when button is colicked and thefunction is executed -->
 
 
 
