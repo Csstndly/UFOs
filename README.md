@@ -9,12 +9,15 @@ The purpose of this project was to create a webpage with an interactive table th
 ## Results
 ### Webpage Criteria
 
-When looking for UFO sightings a user would see the listed filters beside the data table. The user would choose one or more filters to input into the boxes. Once the data is put in the user would press enter or click outside of the box to get the new filtered table. User could scroll through the information desired. The user could continue to add more filters or delete the user already in place and choose a new filter to go through the data.
+When looking for UFO sightings a user would see the listed filters beside the data table. The user would choose one or more filters to input into the boxes.
+![filters](https://user-images.githubusercontent.com/88587406/139603779-cc4fbf3e-5a88-4efa-aa8e-6f2d86e579e6.PNG)
 
+ Once the data is put in the user would press enter or click outside of the box to get the new filtered table. User could scroll through the information desired. The user could continue to add more filters or delete the user already in place and choose a new filter to go through the data.
+![filters](https://user-images.githubusercontent.com/88587406/139603801-5b78ef42-caab-4e23-9601-de47cdc702ea.PNG)
 
 ## Summary
 ### Improvements and Drawbacks
 
-In all this is a good starting webpage. One drawback from the new design is that it isnít adaptable to devices that arenít a computer. Itís too big and doesnít shrink in size. This can make the userís experience difficult and run them off. Also, there isnít any data outside of the year 2010. This will limit the userís experience with the website and it might make them feel a bit disappointed about the information that is available. So, adding diverse data could make the experience more interesting. Another possible improvement is with the filter selection. Shape isnít a great filter as under the category of shapes are light, formation, and fireball to name a few. Maybe even renaming it to ìappearanceî would be better. Another would be to add a comment when none of the data matches the criteria to say ìinformation unavailableî.
+In all this is a good starting webpage. One drawback from the new design is that it isn‚Äôt adaptable to devices that aren‚Äôt a computer. It‚Äôs too big and doesn‚Äôt shrink in size. This can make the user‚Äôs experience difficult and run them off. Also, there isn‚Äôt any data outside of the year 2010. This will limit the user‚Äôs experience with the website and it might make them feel a bit disappointed about the information that is available. So, adding diverse data could make the experience more interesting. Another possible improvement is with the filter selection. Shape isn‚Äôt a great filter as under the category of shapes are light, formation, and fireball to name a few. Maybe even renaming it to ‚Äúappearance‚Äù would be better. Another would be to add a comment when none of the data matches the criteria to say ‚Äúinformation unavailable‚Äù.
 
 
