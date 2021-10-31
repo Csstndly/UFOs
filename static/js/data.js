@@ -689,7 +689,7 @@ var data = [
     state: "ca",
     country: "us",
     shape: "triangle",
-    durationMinutes: 20,
+    durationMinutes: "20",
     comments: "((HOAX??))  1/9/19 DURATION 20:00 FREEDOM CA  IT WAS A TRIANGLE BUT FIRST IT WAS ONE LIGHT"
   },
   {
@@ -999,3 +999,5 @@ var data = [
     comments: "Bright orange object&#44 rapid speed and direction changes .."
   }
 ];
+
+ // person.age
